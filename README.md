@@ -4,6 +4,13 @@ A terminal-based Python typing game where players improve their typing speed and
 
 ---
 
+## Requirements
+
+- Python 3.7+
+- No external libraries required — uses only Python standard library (`time`, `random`, `datetime`, `difflib`, `os`, `sys`, `termios`/`msvcrt`)
+
+---
+
 ## How to Run
 
 ```
@@ -69,19 +76,6 @@ All sentences are **Python course-themed** — covering core concepts, syntax, f
 
 ---
 
-## Rank System
-
-| WPM | Rank |
-|-----|------|
-| 100+ | 👑 Transcendent |
-| 80+ | ⚡ Lightning Fingers |
-| 60+ | 🔥 Speed Demon |
-| 40+ | ✅ Competent Typist |
-| 20+ | 📈 Improving |
-| 0+ | 🐢 Beginner |
-
----
-
 ## Project Files
 
 | File | Description |
@@ -89,28 +83,3 @@ All sentences are **Python course-themed** — covering core concepts, syntax, f
 | `typing_speed_test.py` | Main program — all game logic, classes, and modes |
 | `leaderboard.txt` | Auto-generated on first run; stores all player records |
 
----
-
-## Course Concepts Used
-
-- Variables and data types
-- `if` / `elif` / `else` conditionals
-- `for` and `while` loops
-- Lists, tuples, and dictionaries
-- Functions (`def`, parameters, `return`)
-- Classes and objects (`TypingSession`, `Leaderboard`)
-
-### Advanced Features Implemented
-
-| Feature | Where Used |
-|---------|-----------|
-| **File I/O** | `Leaderboard._load_from_file()` and `_save_to_file()` — leaderboard persists across sessions |
-| **Workflow Controls** | `try`/`except`/`raise` for input validation; `break` to exit game loops; `continue` to retry invalid input; early `return` in rank lookup |
-| **Multi-dimensional Lists** | `self.records` — a 2D list where each row stores one session's `[date, username, wpm, accuracy, time, difficulty, mode]` |
-
----
-
-## Requirements
-
-- Python 3.7+
-- No external libraries required — uses only Python standard library (`time`, `random`, `datetime`, `difflib`, `os`, `sys`, `termios`/`msvcrt`)
